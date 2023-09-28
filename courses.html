@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Courses</title>
+    <link rel="stylesheet" href="courses.css">
+</head>
+<body>
+    <header>
+        <h1>Learn Web & Android Development</h1>
+        <p>Unlock Your Potential & Enhance Your Skills</p>
+    </header>
+
+    <div id="mainDiv">
+        <section class="course">
+            <div class="course-info">
+                <h2>Web Development Course</h2>
+                <p>Master the art of building web applications using HTML, CSS, and JavaScript.</p>
+                <ul>
+                    <li>HTML5 and CSS3 Fundamentals</li>
+                    <li>Modern JavaScript Programming</li>
+                    <li>Responsive Web Design</li>
+                    <li>Front-end Frameworks (e.g., React, Angular, or Vue)</li>
+                    <li>Backend Development (e.g., Node.js, Express)</li>
+                </ul>
+                <div class="btnPurchase" >
+                    <button id="webPurchaseBtn" class="enroll-button">Enroll Now</button>
+                    <div>₹ 2000</div>
+                </div>
+                
+            </div>
+            <div class="course-image">
+                <img src="./icon/webDevelopment.jpeg" alt="Web Development Course">
+            </div>
+        </section>
+
+        <section class="course">
+            <div class="course-info">
+                <h2>Android Development Course</h2>
+                <p>Create amazing Android apps using Java or Kotlin and become an Android developer.</p>
+                <ul>
+                    <li>Introduction to Android Development</li>
+                    <li>Java/Kotlin Programming for Android</li>
+                    <li>User Interface Design</li>
+                    <li>API Integration and Data Storage</li>
+                    <li>Testing and Deployment</li>
+                </ul>
+                <button class="enroll-button">Enroll Now</button>
+            </div>
+            <div class="course-image">
+                <img src="./icon/androidDev.jpeg" alt="Android Development Course">
+            </div>
+        </section>
+
+    </div>
+    
+    
+    
+   
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-database.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="courses.js"></script>
+    
+</body>
+</html>

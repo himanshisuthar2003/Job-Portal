@@ -1,0 +1,31 @@
+{
+  "name": "4.-tailwind",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "vite"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.3.3",
+    "vite": "^4.1.1"
+  },
+  "dependencies": {
+    "firebase": "^9.17.1",
+    "firebase-admin": "^11.10.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Deepak-0808/Job-Search-Portal.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Deepak-0808/Job-Search-Portal/issues"
+  },
+  "homepage": "https://github.com/Deepak-0808/Job-Search-Portal#readme",
+  "description": ""
+}

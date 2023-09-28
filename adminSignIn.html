@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin SignIn</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #E3E6E3;
+        }
+    
+        h1 {
+          text-align: center;
+          color: #333;
+          margin-top: 50px;
+        }
+    
+        #form {
+          margin: 50px auto;
+          width: 400px;
+          background-color: #fff;
+          padding: 20px;
+          border-radius: 10px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+    
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+          display: block;
+          width: 100%;
+          padding: 10px;
+          margin-bottom: 20px;
+          border: none;
+          border-radius: 5px;
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+          font-size: 16px;
+          color: #333;
+        }
+    
+        input[type="submit"] {
+          background-color: #333;
+          color: #fff;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 5px;
+          font-size: 16px;
+          cursor: pointer;
+        }
+    
+        input[type="submit"]:hover {
+          background-color: #555;
+        }
+    
+        .centerContent{
+          text-align: center;
+          margin-bottom: 20px;
+        }
+    
+        a{
+          text-decoration: none;
+    
+        }
+    
+        button {
+          padding: 10px;
+          width: 100%;
+          background-color: #3B81F6;
+          color: white;
+          border-radius: 15px;
+          font-size: 20px;
+          margin-bottom: 20px;
+    
+        }
+      </style>
+</head>
+<body>
+    <h1>Sign In As Admin</h1>
+  <div id="form">
+    <label for="email">Email:</label>
+    <input type="email" id="email" required>
+    <label for="password">Password:</label>
+    <input type="password" id="password" required>
+    <div class="centerContent">  <a href="/forgotPass.html">Forgot password?</a> </div>
+    <button id="signinbtn" class="cursor-pointer" type="submit">signIn</button>
+  </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-database.js"></script>
+    <script src="adminSignIn.js"></script>
+</body>
+</html>

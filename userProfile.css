@@ -1,0 +1,301 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Basic styling */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  header {
+    background-color: #0077b6;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+   .profile {
+    display: flex; 
+    justify-content: center;  
+    align-items: center;
+    margin-bottom: 20px;
+  } 
+
+  .profile-info{
+    position: relative;
+    left: 0;
+    top: 0
+  }
+  
+
+  
+  #profilePic {
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+  #editiconProfile{
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 100px;
+    left: 140px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+
+#profile-pic-upload-form{
+  margin: 30px;
+}
+
+#profilePicSaveBtn:hover{
+  background-color: rgb(55, 183, 33);
+}
+#profilePicCancelBtn:hover{
+  background-color: rgb(187, 187, 67);
+}
+.btnTemplete{
+    padding: 6px 6px;
+    background-color: #0077b6;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+  .editicon{
+    height: 30px;
+    width: 30px;
+    
+  }
+  
+  .profile-actions button {
+    padding: 10px 20px;
+    background-color: #0077b6;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .profile-actions button:last-child {
+    margin-right: 0;
+  }
+  
+  .experience li {
+    margin-bottom: 20px;
+  }
+  
+.btnPointer{
+  cursor: pointer;
+}
+
+
+  /* Add more styles as needed */
+  
+  
+  /* Reset some default styles */
+  body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Basic styling */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  h2, h3 {
+    color: #333;
+  }
+  
+  section {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #0077b6;
+  }
+  
+  /* Skills section */
+  .skills ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .skills li {
+    background-color: #0077b6;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  /* Portfolio section */
+  .portfolio ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .portfolio li {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .portfolio img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  /* Resume upload form */
+  .resume-upload form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .resume-upload input[type="file"] {
+    margin-bottom: 10px;
+  }
+  
+  .resume-upload button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #0077b6;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+
+  #download-resume-button{
+    padding: 6px 6px;
+    background-color: #0077b6;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+  }
+
+  .acadTitle {
+    display: flex; /* Use flexbox layout */
+    justify-content: space-between; /* Space items evenly on the horizontal axis */
+    align-items: center; /* Vertically center-align items */
+    
+}
+
+.acadTitle h2 {
+    margin: 0; /* Remove default margin on the <h2> element */
+}
+
+.acadTitle button {
+    background: none; /* Remove button background */
+    border: none; /* Remove button border */
+    
+}
+
+#add-academic-button{
+  cursor: pointer;
+}
+
+  
+  /* Add more styles as needed */
+  
+  
+  
+  /* ... previous CSS styles ... */
+  
+  /* Modal styles */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 70%;
+  }
+  
+  .close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close-button:hover,
+  .close-button:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* ... remaining CSS styles ... */
+  
+
+  /* Style for the popup container */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+/* Style for the popup content */
+.popup-content {
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Style for the close button (×) */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}

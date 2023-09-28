@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="userProfile.css">
+</head>
+
+<body>
+    <header>
+        <h1>User Profile</h1>
+    </header>
+    <main>
+        <section class="profile">
+            <div class="profile-info" >
+                <img src="/icon/profilePic.png" id="profilePic" alt="User's Profile Picture">
+                <img src="./icon/cameraEditIcon.png" id="editiconProfile" alt="">
+                <h1 id="username"></h1>
+                <p> <span id="email"></span></p>
+                <!-- <p>Location: <span id="location">Motihari, USA</span></p>
+                <p>Skills: <span id="skills">HTML, CSS, JavaScript</span></p> -->
+                
+            </div>
+        </section>
+
+        <section class="education">
+            <div class="acadTitle">
+                <h2>Education</h2>
+                <button id="educationAddBtn" class="btnPointer"><img src="./icon/editIcon.png" class="editicon" alt="Add"></button>
+            </div>
+            <ul id="education-list">
+                
+
+            </ul>
+        </section>
+
+        <!-- Skills section -->
+        <section class="skills">
+            <div class="acadTitle">
+                <h2>Skills</h2>
+                <button id="skillsAddBtn" class="btnPointer"><img src="./icon/editIcon.png" class="editicon" alt="Add"></button>
+            </div>
+            <ul id="skills-list">
+
+                <!-- Add skills here as needed -->
+            </ul>
+        </section>
+
+        <section class="academics">
+            <div class="acadTitle">
+                <h2>Work Experience</h2>
+                <button id="experienceAddBtn" class="btnPointer"><img src="./icon/editIcon.png" class="editicon" alt="Add"></button>
+            </div>
+            <ul id="experience-list">
+
+            </ul>
+        </section>
+
+        <!-- Academics / Personal Projects section -->
+        <section class="academics">
+            <div class="acadTitle">
+                <h2>Academics / Personal Projects</h2>
+                <button id="add-academic-button" class="btnPointer"><img src="./icon/editIcon.png" class="editicon" alt="Add"></button>
+            </div>
+            <ul id="academics-list">
+
+            </ul>
+
+        </section>
+
+
+        <!-- Add resume upload form -->
+        <section class="resume-upload">
+            <h2>Resume</h2>
+            <ul style="display: flex; justify-content: space-between; margin-top: 5px;">
+                <li>
+                    <form id="resume-upload-form" enctype="multipart/form-data">
+                        <input type="file" id="resume-file" name="resume" accept=".pdf, .doc, .docx">
+                        <button type="submit" id="upload-resume-button">Upload Resume</button>
+                    </form>
+                </li>
+                <li>
+                    <a href="" id="download-resume-button" target="_blank" style="display: none;" download>Download</a>
+                    
+                </li>
+            </ul>
+        </section>
+
+        
+
+
+
+    </main>
+
+
+
+
+
+
+    <div id="add-education-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="educationCloseBtn">&times;</span>
+            <h3>Education</h3>
+            <form id="education-form">
+                <label for="levelOrStandard">Level of education/Standard:</label>
+                <input type="text" id="levelOrStandard" name="levelOrStandard" required>
+                <label for="university">University/School Name:</label>
+                <input type="text" id="university" name="university" required>
+                <label for="completion-date">Completion Date:</label>
+                <input type="text" id="completion-date" name="completion-date" required>
+            </form>
+            <button id="educationFormSubmitBtn" type="submit">Add</button>
+        </div>
+    </div>
+
+
+    <div id="add-academic-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="projectCloseBtn">&times;</span>
+            <h3>Add Academic / Project</h3>
+            <form id="academic-form">
+                <!-- Input fields for academic/project details go here -->
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" required>
+                <label for="institution">Institution:</label>
+                <input type="text" id="institution" name="institution" required>
+                <label for="completionDate">Completion Date:</label>
+                <input type="text" id="completionDate" name="completionDate" required>
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" required></textarea>
+            </form>
+            <button id="formSubmitBtn" type="submit">Add</button>
+        </div>
+    </div>
+
+
+    <div id="add-skills-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="skillsCloseBtn">&times;</span>
+            <h3>Add Academic / Project</h3>
+            <form id="skills-form">
+                <label for="skills1">Skills:</label>
+                <input type="text" id="skills1" name="skills" required>
+            </form>
+            <button id="skillsFormSubmitBtn" type="submit">Add</button>
+        </div>
+    </div>
+
+
+
+
+    <div id="add-experience-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="experienceCloseBtn">&times;</span>
+            <h3>Experience</h3>
+            <form id="experience-form">
+                <label for="role">Role:</label>
+                <input type="text" id="role" name="role" required>
+                <label for="company">Company Name:</label>
+                <input type="text" id="company" name="company" required>
+                <label for="duration-date">Duration-Date:</label>
+                <input type="text" id="duration-date" name="duration-date" required>
+            </form>
+            <button id="experienceFormSubmitBtn" type="submit">Add</button>
+        </div>
+    </div>
+
+
+    <div id="edit-popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closeEditPopup()">&times;</span>
+            <!-- Edit profile form or content goes here -->
+            <form id="profile-pic-upload-form" enctype="multipart/form-data">
+                <input type="file" id="profile-pic-file" name="profile-pic" accept="image/*">
+            
+                <button id="profilePicSaveBtn" class="btnTemplete" type="submit">Save</button>
+                <button type="button" id="profilePicCancelBtn" class="btnTemplete" onclick="closeEditPopup()">Cancel</button>
+            </form>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-storage.js"></script>
+    
+    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-database.js"></script>
+    <script src="userProfile.js"></script>
+    <script src="authTimeOut.js" type="module"></script>
+</body>
+
+</html>

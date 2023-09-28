@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Search</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body style="background-color: #E3E6E3;">
+  <!-- Navbar -->
+  <nav class="bg-blue-500 py-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="#" class="text-white text-2xl font-bold">JobFinder</a>
+      <div class="hidden md:block">
+        <ul class="flex space-x-4">
+          <li><a href="#" class="text-white hover:text-blue-300">Home</a></li>
+          <li><a href="#" class="text-white hover:text-blue-300">About Us</a></li>
+          <li><a href="#" class="text-white hover:text-blue-300">Career Advice</a></li>
+          <li><a href="./courses.html" class="text-white hover:text-blue-300">Online Courses</a></li>
+        </ul>
+      </div>
+
+      <div class="hidden md:block ">
+        <ul class="flex space-x-4">
+          <!-- <div id="signIn-signup-visibility"> -->
+          <li id="signIn-signup-visibility">
+            <a href="/signIn.html"
+              class="bg-white text-blue-500 font-bold py-2 px-4 rounded-full hover:bg-blue-100">Sign In</a>
+            <a href="/signUp.html"
+              class="bg-white text-blue-500 font-bold py-2 px-4 rounded-full hover:bg-blue-100">Sign Up</a>
+            <a href="/adminSignIn.html"
+              class="bg-white text-blue-500 font-bold py-2 px-4 rounded-full hover:bg-blue-100">Admin</a>
+          </li>
+          <li id="profile-dropdown" class="dropdown">
+            <div id="username" href="#"
+              class="bg-white text-blue-500 font-bold py-2 px-4 rounded-full hover:bg-blue-100"></div>
+            <div class="dropdown-content">
+              <!-- Add dropdown menu items here -->
+              <a href="userProfile.html">view & edit profile</a>
+              <a id="changePassword" href="#">change password</a>
+              <a id="deleteAccount" href="#">delete account</a>
+              <a id="sign-out-btn" href="#">signout</a>
+              <!-- Add more options as needed -->
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Search Section for Job -->
+  <section>
+
+    <div class="pt-20 pl-20">
+      <h2 class="text-3xl text-black">Find Your Dream Job Here</h2>
+    </div>
+
+    <!-- search Box -->
+    <div class="flex bg-white mt-12 ml-20 mr-20 h-20 w-auto rounded-full ">
+      <img src="/icon/find.png" class="w-7 h-7 mt-7 mr-4 ml-7">
+      <input id="jobTitleUserInput" type="text" class=" h-full w-72 pl-3 text-2xl" placeholder="Job title or Keyword">
+      <div class="w-1 h-full bg-slate-400 "></div>
+      <img src="/icon/pin.png" class="w-7 h-7 mt-7 mr-4 ml-7">
+      <input id="jobLocation" type="text" class="h-full w-72 pl-3 text-2xl" placeholder="Job location">
+      <button id="searchJob" class="bg-blue-500 h-14 w-52 text-white rounded-full ml-96 mt-3 mr-3 ">Search</button>
+    </div>
+    <!-- background image -->
+    <!-- <img src="/background img/2.avif" class="h-full w-full"> -->
+
+  </section>
+  <!-- Loader -->
+  <section>
+    <div id="loadId">
+      <div class="" id="loading"></div>
+    </div>
+
+  </section>
+
+  <!-- job details -->
+
+  <section class="container ml-10 flex justify-between">
+    <div id="jobsAvilable" class="flex-row w-8/12">
+      <div class="h-auto m-10 bg-white rounded-2xl shadow-2xl ">
+        <div class="p-5 flex-row">
+          <div class="flex justify-between">
+            <div class="flex-row">
+              <h2 id="job_title">Android Developer</h2>
+              <div class="text-gray-400">Line Corporation</div>
+            </div>
+            <img src="/icon/building.png" class="w-12">
+          </div>
+
+          <div class="flex mt-5 justify-between max-h-20">
+            <div class="bg-slate-100 p-3 rounded-lg">Fulltime</div>
+            <div class="bg-slate-100 flex p-3 rounded-lg pr-8 pl-2">
+              <img src="/icon/pin.png" width="30px" class="p-1">Noida
+            </div>
+          </div>
+          <div class="bg-slate-100 h-0.5 mt-3"></div>
+          <div class="flex justify-center">
+            <a id="applyLink" href="" target="_blank">
+              <button class="bg-blue-500 rounded-full mt-5 p-3 text-white shadow-black shadow-md ">Apply Now</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Job filter -->
+    <section class="container h-auto w-72 m-10 mr-20">
+      <div class="bg-white p-4 mb-5 flex justify-between rounded-xl">
+        <h1 class=" text-2xl ">Filter Your Job</h1>
+      </div>
+
+      <div class=" flex-row p-4 h-auto mb-5 bg-blue-500 rounded-xl">
+        <div class=" text-white">
+          <div class=" flex justify-between">
+            <div class="text-xl">Job Type</div>
+            <div id="clearId" class=" cursor-pointer">Clear</div>
+          </div>
+          <div id="empType">
+            <div> <input id="fulltime" type="checkbox" value="FULLTIME" name="fulltime"> Full Time</div>
+            <div> <input id="parttime" type="checkbox" value="PARTTIME" name="parttime"> Part Time</div>
+            <div> <input id="contractor" type="checkbox" value="CONTRACTOR" name="Contractor"> Contractor</div>
+            <div> <input id="intern" type="checkbox" value="INTERN" name="Internship"> Intern</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <!-- Your scripts here -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-database.js"></script>
+
+
+  <script src="index.js" type="module"></script>
+  <script src="userProfileAuth.js" type="module"></script>
+  <script src="authTimeOut.js" type="module"></script>
+
+</body>
+
+</html>
